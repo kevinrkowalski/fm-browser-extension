@@ -5,7 +5,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/fm-browser-extension/'
+			base: process.argv.includes('dev') ? '' : '/fm-browser-extension'
 		}
 	}
 };
