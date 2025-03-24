@@ -1,6 +1,6 @@
 <script>
 	import Extension from './Extension.svelte';
-	import { ExtensionsState } from '../state/ExtensionsState.svelte';
+	import { ExtensionsState } from '../state/State.svelte';
 
 	let activeFilter = $props();
 </script>

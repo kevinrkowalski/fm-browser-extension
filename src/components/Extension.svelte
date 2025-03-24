@@ -1,5 +1,5 @@
 <script>
-	import { ExtensionsState } from '../state/ExtensionsState.svelte';
+	import { ExtensionsState } from '../state/State.svelte';
 	let { extension, activeFilter } = $props();
 	let { logo, name, description } = extension;
 
@@ -22,18 +22,20 @@
 </script>
 
 {#if shouldShowExtension()}
-	<li class="flex min-h-40 flex-col justify-between gap-4 rounded-2xl bg-white p-4 shadow-md">
+	<li
+		class="flex min-h-40 flex-col justify-between gap-4 rounded-2xl bg-white p-4 shadow-md dark:bg-neutral-800 dark:text-white"
+	>
 		<div class="flex gap-3">
 			<img src={logo} alt={`${name} logo`} class="h-12" />
 			<div>
 				<h3 class="font-bold">{name}</h3>
-				<p class="text-sm text-neutral-500">{description}</p>
+				<p class="text-sm text-neutral-500 dark:text-neutral-400">{description}</p>
 			</div>
 		</div>
 		<div class="flex justify-between">
 			<button
 				type="button"
-				class="cursor-pointer rounded-full border border-neutral-200 px-3 py-1 text-sm hover:border-red-700 hover:bg-red-700 hover:text-white focus:outline-red-700"
+				class="cursor-pointer rounded-full border border-neutral-200 px-3 py-1 text-sm hover:border-red-700 hover:bg-red-700 hover:text-white focus:outline-red-700 dark:border-neutral-600"
 				onclick={handleRemove}>Remove</button
 			>
 			<label class="group relative flex cursor-pointer items-center justify-between p-2">
