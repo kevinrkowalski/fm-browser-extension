@@ -4,7 +4,7 @@
 	font-family: 'Noto Sans';
 	font-style: normal;
 	font-display: swap;
-	src: url('Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+	src: url('/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 @theme {
